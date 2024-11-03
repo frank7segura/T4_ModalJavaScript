@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="movil.css">
+    <script src="https://kit.fontawesome.com/b971a45ca4.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="cabecera ancho">
+        <figure>
+            <img src="imagenes/logo.jpg" alt="Texto descriptivo">
+        </figure>
+    </header>
+    <section class="cuerpo ancho">
+        <div class="info">
+            <div class="texto">
+                <h2>Our Team</h2>
+                <h1>A Dedicated Team of Experts</h1><br>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, mollitia? Quibusdam quisquam quidem sequi labore blanditiis minus laboriosam sapiente fugiat impedit.</p><br>
+                <p class="semi_bold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, animi placeat consectetur officia id sit nemo nostrum aliquid, possimus accusamus quibusdam! Libero velit facere officia minima animi odit nobis reprehenderit.</p><br>
+                <p class="semi_bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa sunt quidem illum, dolorum nobis consequuntur aut aspernatur corporis quod rerum dignissimos quam.</p><br>
+                <div class="botones">
+                    <a href="#" class="abrir_modal">LEARN MORE</a>
+                    <a href="#" class="abrir_modal">VIEW ALL TEAM</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="personas">
+            <div class="cont_info">
+                <figure>
+                    <img src="imagenes/foto1.jpg" alt="Texto descriptivo">
+                </figure><br>
+                <h2>Jessica Cooper</h2>
+                <p class="semi_bold">Esthetician</p><br>
+                <div class="iconos">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                </div><br>
+                <a href="#" class="abrir_modal">GET IN TOUCH</a>
+            </div>
+
+            <div class="cont_info">
+                <figure>
+                    <img src="imagenes/foto2.jpg" alt="Texto descriptivo">
+                </figure><br>
+                <h2>Robert Wagner</h2>
+                <p class="semi_bold">Hairdresser</p><br>
+                <div class="iconos">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-pinterest"></i>
+                </div><br>
+                <a href="#" class="abrir_modal">GET IN TOUCH</a>
+            </div>
+        </div>
+    </section>
+    <footer class="pie ancho">
+    </footer>
+
+
+<!-- MODAL -->
+<div id="modal" class="filtro-modal">
+    <div class="modal-content informacion">
+        <a href="" class="close-button" id="cerrar_Modal"><i class="fa-solid fa-rectangle-xmark"></i></a>
+        <h2>Contact Us</h2>
+        <p class="txt-Gral">If you have any questions concerning our services, please fill out the contact form below</p>
+        <form action="" method="post" class="formulario-modal">
+          <input type="text" placeholder="Name *" name="name" id="" required>
+          <input type="email" placeholder="E-mail *" name="correo" id="" required>
+          <textarea name="textarea" rows="10" cols="50" placeholder="Message *"></textarea>
+          <input type="submit" value="SUBMIT"> 
+        </form>
+    </div>
+  </div>
+
+
+<script>
+    // Verificamos si el modal se ha mostrado antes en esta sesión
+    if (!sessionStorage.getItem("modalShown")) {
+        // Inicia el temporizador de 5 segundos para abrir el modal
+        setTimeout(() => {
+            $("#modal").addClass("mostrar");
+        }, 5000);
+    }
+
+    // Abre el modal manualmente cuando se hace clic en el botón
+    $(".abrir_modal").click(function () {
+        $("#modal").addClass("mostrar");
+    });
+
+    // Cierra el modal cuando se hace clic en el botón de cerrar
+    $("#cerrar_Modal").click(function () {
+        $("#modal").removeClass("mostrar");
+        sessionStorage.setItem("modalShown", "true"); // Guarda el estado del modal en esta sesión
+    });
+
+    // Cierra el modal cuando se hace clic fuera del contenido del modal
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            $("#modal").removeClass("mostrar");
+            sessionStorage.setItem("modalShown", "true");
+        }
+    };
+
+    // Cierra el modal al presionar la tecla ESC
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            $("#modal").removeClass("mostrar");
+            sessionStorage.setItem("modalShown", "true");
+        }
+    });
+</script>
+
+</body>
+</html>

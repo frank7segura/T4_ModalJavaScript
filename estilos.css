@@ -1,0 +1,237 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arimo;
+}
+
+.ancho{
+    margin: auto;
+    max-width: 1600px;
+}
+
+.semi_bold{
+    color: rgb(100, 94, 94);
+}
+
+.cuerpo{
+    display: flex;
+    flex-direction: row;
+}
+
+.cabecera{
+    background-color: #F2EDDF;
+    display: flex;
+    justify-content: center;
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+}
+
+
+.texto{
+    text-align: left;
+    /* display: flex; */
+    max-width: 70%;
+    /* justify-content: left; */
+}
+
+.texto h2{
+    text-align: left;
+    font-style: italic;
+    color: #af9c67;
+    font-size: 20px;
+}
+.texto h1{
+    font-family: 'Times New Roman';
+    color: rgb(58, 57, 57);
+    font-size: 36px;
+}
+
+.botones{
+    display: flex;
+    justify-content: left;
+    gap: 200px;
+    max-width: 100%;
+}
+
+.botones a{
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #D96A73;
+}
+
+.botones a:hover{
+    color: black;
+    border: 1px black solid;
+    background-color: white;
+}
+
+.personas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+    background-color: #F7F7F7;
+}
+
+.cont_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cont_info h2{
+    font-family: 'Times New Roman';
+    color: #D96A73;
+}
+
+.cont_info figure{
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.cont_info figure img{
+    width: 100%;
+    object-fit: cover;
+    display: inline-block;
+}
+
+.iconos{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.iconos i{
+    font-size: 16px;
+    color: rgb(100, 94, 94);
+}
+
+.cont_info a{
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #D96A73;
+}
+
+.cont_info a:hover{
+    color: black;
+    border: 1px black solid;
+    background-color: white;
+}
+
+.pie{
+    height: 40px;
+    background-color: #D96A73;
+}
+
+.filtro-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Mostrar modal */
+.filtro-modal.mostrar {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Contenedor del contenido del modal */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Estilos del botón de cerrar */
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #ff5a5a;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.close-button:hover {
+    color: #5aa400;
+}
+
+/* Encabezado del modal */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+/* Estilo del texto de descripción */
+.txt-Gral {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos del formulario */
+.formulario-modal input[type="text"],
+.formulario-modal input[type="email"],
+.formulario-modal textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Estilo del botón de envío */
+.formulario-modal input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff5a5a;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.formulario-modal input[type="submit"]:hover {
+    background-color: #5aa400;
+}
+  

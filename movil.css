@@ -1,0 +1,100 @@
+@media screen and (max-width: 480px){
+    .ancho{
+        margin: auto;
+        max-width: 480px;
+    }
+
+    .cuerpo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 500px;
+        margin-bottom: 20px;
+    }
+    
+    
+    .texto{
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+        align-items: flex-start;
+    }
+    
+    .texto h2{
+        font-style: italic;
+        color: #af9c67;
+        font-size: 14px;
+    }
+    .texto h1{
+        font-family: 'Times New Roman';
+        color: rgb(58, 57, 57);
+        font-size: 24px;
+    }
+    
+    
+    .botones{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;
+        max-width: 100%;
+    }
+
+    .botones a{
+        font-size: 12px;
+        text-decoration: none;
+        color: white;
+        border-radius: 15px;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #D96A73;
+        margin-bottom: 15px;
+    }
+
+    .botones a:hover{
+        color: black;
+        border: 1px black solid;
+        background-color: white;
+    }
+
+    .personas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        background-color: #F7F7F7;
+    }
+    
+    .cont_info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cont_info h2{
+        font-family: 'Times New Roman';
+        color: #D96A73;
+    }
+
+    .cont_info figure{
+        max-width: 180px;
+        max-height: 180px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .cont_info figure img{
+        width: 100%;
+        object-fit: cover;
+        display: inline-block;
+    }
+}
